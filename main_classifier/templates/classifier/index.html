@@ -1,0 +1,46 @@
+{% extends "classifier/base.html" %}
+
+{% block content %}
+    
+            <!-- banner -->
+            <section class="banner_w3pvt" id="home">
+                <div class="csslider infinity" id="slider1">
+                    <ul>
+                        
+                        <li>
+                            <div class="banner-top2">
+                                <div class="overlay">
+                                    <div class="container">
+                                        <div class="banner-info">
+                                            <div class="banner-w3layouts-inner">
+                                                <h3>Welcome to an Image Classification WebApp</h3>
+                                                <h4> classify your image here...</h4>
+                                                <a href="{% url 'classifier:upload_img' %}" class="read btn mt-3">Make a Prediction Now!</a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        
+                    </ul>
+            
+                </div>
+            </section>
+            <!-- //banner -->
+
+{% endblock content %}
+
+        </div>
+        <!-- //header -->
+        
+  <!-- footer -->
+  <div>
+{% include "classifier/footer.html" %}
+
+
+    </div>
+</body>
+
+</html>

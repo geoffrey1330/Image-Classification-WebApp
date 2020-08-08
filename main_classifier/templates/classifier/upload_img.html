@@ -1,0 +1,69 @@
+{% extends "classifier/base.html" %}
+
+{% block content %}
+
+            <!-- banner -->
+            <section class="banner_w3pvt" id="home">
+                <div class="csslider infinity" id="slider1">
+               
+                    <ul>
+                        <li>
+                            <div class="banner-top">
+                                <div class="overlay">
+                                    <div class="container">
+                                        <div class="banner-info">
+                                                <div class="container text-center" style="margin-top: 20px;">
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <div class="card" style="width: 30rem;">
+                                                                <div class="card-body">
+                                                                  <h5 class="card-title">Upload an image</h5>
+                                                                  <!-- <p class="card-text"></p> -->
+                                                                  <form method="POST" enctype="multipart/form-data">
+                                                                    {% csrf_token %}
+                                                                    <div class="form-group">
+                                                                        <label for="clastype">Classification Type</label>
+                                                                          {{ form.category }}
+                                                                    </div>
+                                                                    <div class="form-group"> 
+                                                                        {{ form.image }}
+                                                                    </div>
+                                                                    <button type="submit" class="btn btn-primary">Predict</button>
+                                                                  </form>
+
+                                                                </div>
+                                                              </div>
+                                                            
+                                                        </div>
+
+                                                        
+                                                    </div>
+                                                </div>
+                                            
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+  
+                </div>
+            </section>
+            <!-- //banner -->
+
+
+
+        </div>
+        <!-- //header -->
+        <!--/banner-bottom -->
+{% endblock content %}
+        <!-- footer -->
+ <div>
+{% include "classifier/footer.html" %}
+
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+{% extends "classifier/base.html" %}
+
+{% block content %}
+            <!-- banner -->
+            <section class="banner_w3pvt" id="home">
+                <div class="csslider infinity" id="slider1">
+                  
+                    <ul>
+                        <li>
+                            <div class="banner-top">
+                                <div class="overlay">
+                                    <div class="container">
+                                        <div class="banner-info">
+                                                <div class="container text-center" style="margin-top: 20px;">
+                                                    <div class="row">
+                                                        
+                                                        <div class="col-md-8">
+                                                            <div class="card" style="width: 40rem;">
+                                                                <div class="card-body">
+                                                                  <h1 style="padding: 5px;">Your prediction is ready...</h1>
+                                                                  <hr>
+                                                                  <br>
+                                                                  {% if label == "Mask" %}
+                                                                    <h4 class="card-title text-info">PREDICTION: <span class="text-dange"> <b>{{ label }}</b></span></h4>
+                                                                  {% elif label == "Smiling" %}
+                                                                    <h4 class="card-title text-info">PREDICTION: <span class="text-dange"> <b>{{ label }}</b></span></h4>
+                                                                  {% else %}
+                                                                    <h4 class="card-title text-info">PREDICTION: <span class="text-danger"> <b>{{ label }}</b></span></h4>
+                                                                  {% endif %}
+            
+                                                                  <h5 class="card-title"><a href='/back'><input type='submit' class='btn btn-primary' value='Predict another' /></a>
+
+
+
+                                                                </div>
+                                                              </div>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+  
+                </div>
+            </section>
+            <!-- //banner -->
+
+
+
+        </div>
+        <!-- //header -->
+        <!--/banner-bottom -->
+ 
+        <!-- footer -->
+{% endblock content %}
+        <!-- footer -->
+ <div>
+{% include "classifier/footer.html" %}
+
+
+</div>
+</body>
+
+</html>
